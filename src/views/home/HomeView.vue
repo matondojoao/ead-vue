@@ -10,7 +10,7 @@
 
   <div class="content">
     <ul class="listCourses">
-      <card-course />
+      <card-course :title="'Curso de Vue 3'" :image="''" :bgName="'laravel'"/>
     </ul>
   </div>
 </template>
