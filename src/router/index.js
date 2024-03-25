@@ -26,9 +26,14 @@ const routes = [
     ]
   },
   {
-    path:'/',
-    name:'auth',
+    path: '/',
+    name: 'auth',
     component: () => import('@/views/auth/AuthLogin.vue')
+  },
+  {
+    path: '/recuperar-senha',
+    name: 'forget.password',
+    component: () => import('@/views/auth/ForgetPassword.vue')
   }
 ]
 

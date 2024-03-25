@@ -43,15 +43,12 @@
                                 <i class="far fa-envelope"></i>
                                 <input type="email" name="email" placeholder="Email" required>
                             </div>
-                            <div class="groupForm">
-                                <i class="far fa-key"></i>
-                                <input type="password" name="password" placeholder="Senha" required>
-                                <i class="far fa-eye buttom"></i>
-                            </div>
-                            <button class="btn primary" type="submit">Login</button>
+                            <button class="btn primary" type="submit">Recuperar</button>
                         </form>
                         <span>
-                            <p class="fontSmall">Esqueceu sua senha? <router-link class="link primary" :to="{name:'forget.password'}">Clique aqui</router-link></p>
+                            <p class="fontSmall">Acessar ? 
+                                <router-link :to="{name:'auth'}" class="link primary">Clique aqui</router-link>
+                            </p>
                         </span>
                     </div>
                     <span class="copyright fontSmall">
@@ -65,6 +62,6 @@
 
 <script>
 export default{
-    name:'AuthLogin'
+    name:'ForgetPassword'
 }
 </script>
