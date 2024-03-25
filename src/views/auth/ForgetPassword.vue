@@ -46,7 +46,7 @@
                             <button class="btn primary" type="submit">Recuperar</button>
                         </form>
                         <span>
-                            <p class="fontSmall">Acessar ? 
+                            <p class="fontSmall">Acessar? 
                                 <router-link :to="{name:'auth'}" class="link primary">Clique aqui</router-link>
                             </p>
                         </span>
