@@ -25,7 +25,7 @@
                 <div class="login">
                     <div class="content">
                         <span class="logo">
-                            <img src="images/logoDark.svg" alt="">
+                            <img :src="require('@/assets/images/logoDark.svg')" alt="">
                         </span>
                         <span>
                             <p>Seja muito bem vindo!</p>
