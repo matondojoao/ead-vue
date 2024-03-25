@@ -36,7 +36,7 @@
                             <span></span>
                         </span>
                         <span class="description">
-                            Acesse nossa plataforma e desfrute de cursos completos para sua especialização.
+                            Recupere sua senha e acesse nossa plataforma para desfrutar de cursos completos para sua especialização.
                         </span>
                         <form action="/dist/index.html" method="">
                             <div class="groupForm">
