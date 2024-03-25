@@ -24,6 +24,11 @@ const routes = [
         component: HomeView
       }
     ]
+  },
+  {
+    path:'/',
+    name:'auth',
+    component: () => import('@/views/auth/AuthLogin.vue')
   }
 ]
 
