@@ -1,8 +1,8 @@
 <template>
-    <section id="loginPage" :style="{backgroundImage: 'url('+ require('@/assets/images/bgLogin.jpg')+')'}">
+    <section id="loginPage" :style="{ backgroundImage: 'url(' + require('@/assets/images/bgLogin.jpg') + ')' }">
         <div class="loginContent">
             <div class="loginCard">
-                <div class="decor" :style="{backgroundImage: 'url(' + require('@/assets/images/building.jpg') +')'}">
+                <div class="decor" :style="{ backgroundImage: 'url(' + require('@/assets/images/building.jpg') + ')' }">
                     <div class="content">
                         <span class="logo">
                             <img :src="require('@/assets/images/logo.svg')" alt="EspecializaTi">
@@ -14,7 +14,8 @@
                         </span>
                         <span class="description">
                             <p>
-                                Os melhores e mais completos cursos de Laravel do Brasil, cursos com projetos reais. Do zero ao profissional.
+                                Os melhores e mais completos cursos de Laravel do Brasil, cursos com projetos reais. Do
+                                zero ao profissional.
                             </p>
                         </span>
                         <span class="copyright fontSmall">
@@ -38,7 +39,7 @@
                         <span class="description">
                             Acesse nossa plataforma e desfrute de cursos completos para sua especialização.
                         </span>
-                        <form action="/dist/index.html" method="">
+                        <form action="/dist/index.html">
                             <div class="groupForm">
                                 <i class="far fa-envelope"></i>
                                 <input type="email" name="email" placeholder="Email" required>
@@ -48,10 +49,11 @@
                                 <input type="password" name="password" placeholder="Senha" required>
                                 <i class="far fa-eye buttom"></i>
                             </div>
-                            <button class="btn primary" type="submit">Login</button>
+                            <button class="btn primary" @click.prevent="login">Login</button>
                         </form>
                         <span>
-                            <p class="fontSmall">Esqueceu sua senha? <router-link class="link primary" :to="{name:'forget.password'}">Clique aqui</router-link></p>
+                            <p class="fontSmall">Esqueceu sua senha? <router-link class="link primary"
+                                    :to="{ name: 'forget.password' }">Clique aqui</router-link></p>
                         </span>
                     </div>
                     <span class="copyright fontSmall">
@@ -64,7 +66,15 @@
 </template>
 
 <script>
-export default{
-    name:'AuthLogin'
+import router from '@/router'
+export default {
+    name: 'AuthLogin',
+    setup() {
+        const login = () => router.push({ name: 'campus.home' })
+
+        return {
+            login
+        }
+    }
 }
 </script>
