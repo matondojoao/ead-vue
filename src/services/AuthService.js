@@ -1,10 +1,10 @@
-import axios from "axios";
-import { URL_API } from '@/configs'
+import BaseService from "./BaseService";
 
-export default class AuthService {
+export default class AuthService extends BaseService {
 
     static async auth(params) {
-        return axios.post(`${URL_API}/auth/login`, params)
+        return this.request({auth:true})
+            .post('auth/login', params)
     }
 
 }
