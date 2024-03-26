@@ -49,7 +49,7 @@
                                 <input type="password" name="password" placeholder="Senha" required>
                                 <i class="far fa-eye buttom"></i>
                             </div>
-                            <button class="btn primary" @click.prevent="login">Login</button>
+                            <button class="btn primary" @click.prevent="auth">Login</button>
                         </form>
                         <span>
                             <p class="fontSmall">Esqueceu sua senha? <router-link class="link primary"
@@ -67,13 +67,27 @@
 
 <script>
 import router from '@/router'
+import { useStore } from 'vuex'
+
 export default {
     name: 'AuthLogin',
     setup() {
+
+        const store = useStore();
+
         const login = () => router.push({ name: 'campus.home' })
 
+        const auth = () => {
+            store.dispatch('auth', {
+                email: 'matondojoaokitemoco@gmail.com',
+                password: '@matondo@joao115022',
+                device_name:'Firefox'
+            })
+        }
+
         return {
-            login
+            login,
+            auth
         }
     }
 }
